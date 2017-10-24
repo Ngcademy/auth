@@ -1,6 +1,6 @@
 # Ngcademy Auth
 
-An extendable common authentication module for any Angular application. Leverage pre-built, tested code that can be easily extended to provide your own authentication layer on-top of stack that satisfies most business use-cases.
+An extendable common authentication module for any Angular application. Leverage pre-built, tested code that can be easily extended to provide your own authentication layer on-top of a stack that satisfies most business use-cases.
 
 ## Actions
 
@@ -16,7 +16,10 @@ this.store$.dispatch(new Auth.Login({
 }));
 ```
 
+This information is forwarded to your login API endpoint.
+
 #### Login Success
+
 The `LoginSuccess` action is emitted when the `AuthService.login()` method successfully returns back a `200` status code. By default we expect the response body to contain the authenticated user object.
 
 The `authUser` property will be assigned to state based on the response body.
@@ -150,6 +153,35 @@ class ExampleEffect {
     constructor(private actions$: Actions) {}
 }
 ```
+
+#### Current User
+
+_To do documentation_
+
+#### Current User Success
+
+_To do documentation_
+
+#### Current User Failed (alias: Unauthenticated)
+
+_To do documentation_
+
+
+#### Forgot Password
+
+_To do documentation_
+
+#### Reset Password
+
+_To do documentation_
+
+#### Reset Password Success
+
+_To do documentation_
+
+#### Reset Password Failed
+
+_To do documentation_
 
 ## Contributors
 
