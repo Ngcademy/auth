@@ -183,6 +183,12 @@ _To do documentation_
 
 _To do documentation_
 
+### Roadmap
+
+- Plumbing to update authenticated user object
+- Extendable model for accessing/leveraging access & refresh tokens for OAuth2 authentication environments.
+- Example sample application
+
 ## Contributors
 
 [<img alt="Sean perkins" src="https://avatars1.githubusercontent.com/u/13732623?v=3&s=117" width="117">](https://github.com/sean-perkins) |
