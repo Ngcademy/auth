@@ -19,3 +19,5 @@ export const getLoginTimestamp: any = createSelector(getAuthState, fromAuth.getL
 export const getAuthUser: any = createSelector(getAuthState, fromAuth.getAuthUser);
 export const getAuthToken: any = createSelector(getAuthState, fromAuth.getAuthToken);
 export const getRefreshToken: any = createSelector(getAuthState, fromAuth.getRefreshToken);
+export const getAuthLoginErrors: any = createSelector(getAuthState, fromAuth.getLoginErrors);
+export const getAuthRegistrationErrors: any = createSelector(getAuthState, fromAuth.getRegistrationErrors);
