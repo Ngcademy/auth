@@ -1,10 +1,30 @@
-# Ngcademy Auth
+# Ngx Auth
+
+[![npm](https://img.shields.io/npm/v/@teammaestro/ngx-auth.svg)](https://www.npmjs.com/package/@teammaestro/ngx-auth)
+[![npm](https://img.shields.io/npm/dt/@teammaestro/ngx-auth.svg?label=npm%20downloads)](https://www.npmjs.com/package/@teammaestro/ngx-auth)
+
+[![NPM](https://nodei.co/npm/@teammaestro/ngx-auth.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/@teammaestro/ngx-auth/)
 
 An extendable common authentication module for any Angular application. Leverage pre-built, tested code that can be easily extended to provide your own authentication layer on-top of a stack that satisfies most business use-cases.
 
+## Getting Started
+
+Import the `NgxAuthModule` in your root `AppModule`. You can optionally extend the `BaseAuthService` to handle your own authentication endpoints (recommended).
+
+```
+imports: [
+    NgxAuthModule.forRoot([
+        {
+            provide: BaseAuthService,
+            useClass: MyCustomAuthService
+        }
+    ])
+]
+```
+
 ## Actions
 
-`import { Auth } from '@ngcademy/auth';`
+`import { Auth } from '@teammaestro/ngx-auth';`
 
 #### Login
 
@@ -29,7 +49,7 @@ To extend this interaction, create an effect:
 i.e.:
 ```typescript
 import { Effect, Actions } from '@ngrx/effects';
-import { Auth } from '@ngcademy/auth';
+import { Auth } from '@teammaestro/ngx-auth';
 
 @Effect()
 class ExampleEffect {
@@ -53,7 +73,7 @@ To extend this interaction, create an effect:
 i.e.:
 ```typescript
 import { Effect, Actions } from '@ngrx/effects';
-import { Auth } from '@ngcademy/auth';
+import { Auth } from '@teammaestro/ngx-auth';
 
 @Effect()
 class ExampleEffect {
@@ -98,7 +118,7 @@ To extend this interaction, create an effect:
 i.e.:
 ```typescript
 import { Effect, Actions, toPayload } from '@ngrx/effects';
-import { Auth } from '@ngcademy/auth';
+import { Auth } from '@teammaestro/ngx-auth';
 
 @Effect()
 class ExampleEffect {
@@ -138,7 +158,7 @@ i.e.:
 
 ```typescript
 import { Effect, Actions, toPayload } from '@ngrx/effects';
-import { Auth } from '@ngcademy/auth';
+import { Auth } from '@teammaestro/ngx-auth';
 
 @Effect()
 class ExampleEffect {

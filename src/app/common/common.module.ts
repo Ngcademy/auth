@@ -1,7 +1,7 @@
 import { NgModule, ModuleWithProviders, Optional, SkipSelf } from '@angular/core';
 import { BaseAuthService } from './services/auth.service';
 import { StoreModule } from '@ngrx/store';
-import { AuthEffects } from './effects/auth.effects';
+import { AuthEffects } from './effects/auth';
 import { EffectsModule } from '@ngrx/effects';
 import { reducers } from './reducers';
 import * as tokens from './tokens';
@@ -28,11 +28,11 @@ const providers = [
         ForgotPasswordLinkDirective
     ]
 })
-export class NgAuthCommonModule {
+export class NgxAuthModule {
 
     static forRoot(configuredProviders: any[] = []): ModuleWithProviders {
         return {
-            ngModule: NgAuthCommonModule,
+            ngModule: NgxAuthModule,
             providers: [
                 ...providers,
                 ...configuredProviders
@@ -40,9 +40,9 @@ export class NgAuthCommonModule {
         };
     }
 
-    constructor( @Optional() @SkipSelf() parentModule: NgAuthCommonModule) {
+    constructor( @Optional() @SkipSelf() parentModule: NgxAuthModule) {
         if (parentModule) {
-            throw new Error('NgAuthCommonModule already loaded. Import into the root module only.');
+            throw new Error('NgxAuthModule already loaded. Import into the root module only.');
         }
     }
 
