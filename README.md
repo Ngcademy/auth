@@ -117,7 +117,7 @@ To extend this interaction, create an effect:
 
 i.e.:
 ```typescript
-import { Effect, Actions, toPayload } from '@ngrx/effects';
+import { Effect, Actions } from '@ngrx/effects';
 import { Auth } from '@teammaestro/ngx-auth';
 
 @Effect()
@@ -125,8 +125,7 @@ class ExampleEffect {
 
     onRegisterSuccess$ = this.actions$
         .ofType(Auth.REGISTER_SUCCESS)
-        .map(toPayload)
-        .map(payload => {
+        .map(action => {
             // extendable code
         });
 
@@ -157,7 +156,7 @@ To extend this interaction, create an effect:
 i.e.:
 
 ```typescript
-import { Effect, Actions, toPayload } from '@ngrx/effects';
+import { Effect, Actions } from '@ngrx/effects';
 import { Auth } from '@teammaestro/ngx-auth';
 
 @Effect()
@@ -165,8 +164,7 @@ class ExampleEffect {
 
     onRegisterFailed$ = this.actions$
         .ofType(Auth.REGISTER_FAILED)
-        .map(toPayload)
-        .map(payload => {
+        .map(action => {
             // extendable code
         });
 
